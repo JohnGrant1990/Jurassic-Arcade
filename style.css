@@ -1,0 +1,132 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo y cuerpo */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #000 url('fence-ruins.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Efecto CRT */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: repeating-linear-gradient(
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.02) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  z-index: 9998;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00;
+}
+
+button#toggle-sound {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  background: #222;
+  color: #fff;
+  border: 2px solid #ff0000;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+button#toggle-sound:hover {
+  background: #ff0000;
+}
+
+/* Menú de juegos */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.juego {
+  background: rgba(0,0,0,0.6);
+  border-radius: 12px;
+  box-shadow: 0 0 12px #00ffcc;
+  width: 280px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: 0.3s;
+  backdrop-filter: blur(2px);
+}
+
+.juego:hover {
+  background: rgba(255, 0, 0, 0.8);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff0000;
+}
+
+/* Canvas lluvia */
+#efecto-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Botones dino */
+.boton-dino {
+  position: fixed;
+  bottom: 10px;
+  font-size: 2.5rem;
+  z-index: 10000;
+  transition: transform 0.3s;
+}
+
+.boton-dino:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.izquierdo {
+  left: 15px;
+}
+
+.derecho {
+  right: 15px;
+}

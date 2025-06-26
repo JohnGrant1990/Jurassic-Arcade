@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buscaminas Plus</title>
+   <link rel="icon" href="Logo.ico">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>💣 Buscaminas Plus</h1>
+  <div class="panel">
+    <p>Minas restantes: <span id="minas-restantes">10</span></p>
+    <p>Intentos: <span id="intentos">0</span></p>
+    <p>Tiempo: <span id="tiempo">0</span> s</p>
+    <button id="reset" onclick="reiniciarJuego()">🔄 Reiniciar</button>
+  </div>
+  <div id="tablero"></div>
+  <p id="mensaje"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
